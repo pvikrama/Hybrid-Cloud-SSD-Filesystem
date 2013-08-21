@@ -1,12 +1,13 @@
 Hybrid-Cloud-SSD-Filesystem
 ===========================
-CLOUDFS- DESIGN DECISIONS
+Descripton
 
 This is a file system called CloudFS which integrates Solid State Devices(SSDs) and cloud storage (Amazon S3). This file system is built using the File System in User-Space(FUSE) toolkit.
 
 CloudFS includes three dimensions: a core file system that leverages the properties of SSDs and cloud storage for making data placement decision, a second dimension that takes advantage of redundancy in datasets to reduce storage capacity and a third dimension that uses local caching to improve performance and reduce (cloud) costs. The SSD device will have a dedicated local file system (e.g. ext2) mounted on it while the  Cloud storage can be accessed via the Amazon S3 Interface
 
 Design Decisions
+
 Phase1: Building the Hybrid File system
 –	Size-Based data placement
 Small objects are placed on the SSD and large objects are on the cloud storage. This is because the storage costs are much lesser than transfer costs for cloud. The threshold to transfer can be set from command line during run-time.
