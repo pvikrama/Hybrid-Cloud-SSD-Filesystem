@@ -1,5 +1,8 @@
 Hybrid-Cloud-SSD-Filesystem
 ===========================
+
+Time Span: 1 Month
+
 Descripton
 
 This is a file system called CloudFS which integrates Solid State Devices(SSDs) and cloud storage (Amazon S3). This file system is built using the File System in User-Space(FUSE) toolkit.
